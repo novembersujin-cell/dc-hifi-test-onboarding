@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Macroverse ? Together · Username 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="onboarding.css" />
+  </head>
+  <body>
+    <main class="viewport">
+      <div
+        class="stage username-result"
+        id="stage"
+        data-screen="username-result"
+        data-mode="together"
+        data-box="2"
+        data-node-id="2107:6147"
+      >
+        <img
+          class="bg bg-username-result"
+          src="assets/bg-age.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <header class="top-nav top-nav-end">
+          <div
+            class="lang-toggle"
+            role="group"
+            aria-label="Language"
+            data-lang="en"
+          >
+            <button
+              type="button"
+              class="lang-btn is-active"
+              data-lang-option="en"
+              aria-pressed="true"
+            >
+              ENG
+            </button>
+            <button
+              type="button"
+              class="lang-btn"
+              data-lang-option="es"
+              aria-pressed="false"
+            >
+              ESP
+            </button>
+          </div>
+        </header>
+
+        <section class="username-result-body">
+          <h1 class="username-result-title">
+            <span class="username-you-are">You are</span>
+            <span class="username-chip" id="username-chip"></span>
+          </h1>
+
+          <div class="username-avatar" id="username-avatar" data-box="2">
+            <img
+              class="username-avatar-img"
+              id="username-avatar-img"
+              alt=""
+              draggable="false"
+            />
+          </div>
+        </section>
+
+        <footer class="username-result-footer username-result-actions">
+          <button type="button" class="age-ready group-cta" id="username-ready">
+            <img
+              class="age-ready-shape"
+              src="assets/btn-group-cta.svg"
+              alt=""
+              draggable="false"
+            />
+            <span class="age-ready-label">
+              <img
+                class="age-ready-icon"
+                src="assets/icon-ready-check.svg"
+                alt=""
+                width="96"
+                height="65"
+                draggable="false"
+              />
+              Ready
+            </span>
+          </button>
+
+          <button type="button" class="age-ready group-cta" id="username-add">
+            <img
+              class="age-ready-shape"
+              src="assets/btn-group-cta.svg"
+              alt=""
+              draggable="false"
+            />
+            <span class="age-ready-label">
+              <img
+                class="age-ready-icon group-cta-add-icon"
+                src="assets/icon-add-player.svg"
+                alt=""
+                width="90"
+                height="80"
+                draggable="false"
+              />
+              Add player
+            </span>
+          </button>
+        </footer>
+      </div>
+    </main>
+
+    <script src="onboarding.js"></script>
+  </body>
+</html>

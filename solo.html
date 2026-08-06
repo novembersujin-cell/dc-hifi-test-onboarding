@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Macroverse — Solo · Tap Wristband</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="onboarding.css" />
+  </head>
+  <body>
+    <main class="viewport">
+      <div
+        class="stage wristband"
+        id="stage"
+        data-screen="wristband"
+        data-mode="solo"
+        data-node-id="2078:3629"
+      >
+        <img
+          class="bg bg-wristband"
+          src="assets/bg-wristband-tap.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <header class="top-nav top-nav-split">
+          <a class="back-btn" href="index.html">
+            <img
+              class="back-arrow"
+              src="assets/icon-back-h.svg"
+              alt=""
+              width="26"
+              height="14"
+              aria-hidden="true"
+            />
+            Back
+          </a>
+          <div
+            class="lang-toggle"
+            role="group"
+            aria-label="Language"
+            data-lang="en"
+          >
+            <button
+              type="button"
+              class="lang-btn is-active"
+              data-lang-option="en"
+              aria-pressed="true"
+            >
+              ENG
+            </button>
+            <button
+              type="button"
+              class="lang-btn"
+              data-lang-option="es"
+              aria-pressed="false"
+            >
+              ESP
+            </button>
+          </div>
+        </header>
+
+        <section class="wristband-area" aria-label="Solo wristband scan">
+          <button type="button" class="wristband-tap" id="wristband-action">
+            <div class="wristband-radar" aria-hidden="true">
+              <img
+                class="wristband-soundwave wristband-soundwave-idle"
+                src="assets/soundwave-ring-idle.svg"
+                alt=""
+                width="1306"
+                height="1306"
+                draggable="false"
+              />
+              <img
+                class="wristband-soundwave wristband-soundwave-pulse"
+                src="assets/soundwave-ring-pulse.svg"
+                alt=""
+                width="1306"
+                height="1306"
+                draggable="false"
+              />
+            </div>
+            <div class="wristband-core">
+              <div class="wristband-state wristband-state-idle">
+                <img
+                  class="wristband-icon"
+                  src="assets/icon-wristband-tap.svg"
+                  alt=""
+                  width="298"
+                  height="294"
+                  draggable="false"
+                />
+                <p>Tap wristband</p>
+              </div>
+              <div class="wristband-state wristband-state-done" aria-hidden="true">
+                <img
+                  class="wristband-check"
+                  src="assets/icon-wristband-check.svg"
+                  alt=""
+                  width="179"
+                  height="179"
+                  draggable="false"
+                />
+                <p>Registered!</p>
+              </div>
+            </div>
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <script src="onboarding.js"></script>
+  </body>
+</html>

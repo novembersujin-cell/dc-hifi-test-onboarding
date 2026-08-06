@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Macroverse — Solo · Summary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="onboarding.css" />
+  </head>
+  <body>
+    <main class="viewport">
+      <div
+        class="stage summary"
+        id="stage"
+        data-screen="summary"
+        data-mode="solo"
+      >
+        <header class="summary-header">
+          <div class="summary-players" aria-label="Checked-in players">
+            <div class="summary-avatar" id="summary-avatar" data-box="1">
+              <img
+                class="summary-avatar-img"
+                id="summary-avatar-img"
+                alt=""
+                draggable="false"
+              />
+            </div>
+          </div>
+
+          <div
+            class="lang-toggle lang-on-dark"
+            role="group"
+            aria-label="Language"
+            data-lang="en"
+          >
+            <button
+              type="button"
+              class="lang-btn is-active"
+              data-lang-option="en"
+              aria-pressed="true"
+            >
+              ENG
+            </button>
+            <button
+              type="button"
+              class="lang-btn"
+              data-lang-option="es"
+              aria-pressed="false"
+            >
+              ESP
+            </button>
+          </div>
+        </header>
+
+        <section class="summary-body">
+          <h1 class="summary-title">Earn points by being...</h1>
+
+          <div class="summary-traits" aria-label="Character traits">
+            <div class="trait-card trait-dynamic">
+              <img
+                class="trait-card-bg"
+                src="assets/summary/trait-dynamic-bg.svg"
+                alt=""
+                draggable="false"
+              />
+              <div class="trait-card-content">
+                <img
+                  class="trait-card-icon"
+                  src="assets/summary/icon-dynamic.svg"
+                  alt=""
+                  width="120"
+                  height="120"
+                  draggable="false"
+                />
+                <span>Dynamic</span>
+              </div>
+            </div>
+
+            <div class="trait-card trait-curious">
+              <img
+                class="trait-card-bg"
+                src="assets/summary/trait-curious-bg.svg"
+                alt=""
+                draggable="false"
+              />
+              <div class="trait-card-content">
+                <img
+                  class="trait-card-icon"
+                  src="assets/summary/icon-curious.svg"
+                  alt=""
+                  width="120"
+                  height="120"
+                  draggable="false"
+                />
+                <span>Curious</span>
+              </div>
+            </div>
+
+            <div class="trait-card trait-collab">
+              <img
+                class="trait-card-bg"
+                src="assets/summary/trait-collab-bg.svg"
+                alt=""
+                draggable="false"
+              />
+              <div class="trait-card-content">
+                <img
+                  class="trait-card-icon"
+                  src="assets/summary/icon-collab.svg"
+                  alt=""
+                  width="120"
+                  height="120"
+                  draggable="false"
+                />
+                <span>Collaboration</span>
+              </div>
+            </div>
+
+            <div class="trait-card trait-tenacious">
+              <img
+                class="trait-card-bg"
+                src="assets/summary/trait-tenacious-bg.svg"
+                alt=""
+                draggable="false"
+              />
+              <div class="trait-card-content">
+                <img
+                  class="trait-card-icon"
+                  src="assets/summary/icon-tenacious.svg"
+                  alt=""
+                  width="120"
+                  height="120"
+                  draggable="false"
+                />
+                <span>Tenacious</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="summary-footer">
+          <button type="button" class="age-continue" id="summary-continue">
+            Label
+          </button>
+        </footer>
+      </div>
+    </main>
+
+    <script src="onboarding.js"></script>
+  </body>
+</html>

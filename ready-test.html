@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Macroverse — Ready Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ready-test.css" />
+  </head>
+  <body>
+    <main class="viewport">
+      <div class="stage ready-test" id="stage">
+        <img
+          class="bg"
+          src="assets/ready-test/bg.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <header class="top-nav">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" class="lang-btn is-active" aria-pressed="true">
+              ENG
+            </button>
+            <button type="button" class="lang-btn" aria-pressed="false">
+              ESP
+            </button>
+          </div>
+        </header>
+
+        <section class="ready-body">
+          <h1 class="ready-title">
+            <span class="ready-title-lead">You are</span>
+            <span class="ready-title-chip">Collaborative Penguin!</span>
+          </h1>
+
+          <div class="ready-avatar" aria-hidden="true">
+            <img
+              src="assets/ready-test/penguin.png"
+              alt=""
+              width="590"
+              height="555"
+              draggable="false"
+            />
+          </div>
+
+          <div class="ready-cta">
+            <div class="ready-rings" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <button type="button" class="ready-btn" id="ready-btn">
+              <span class="ready-btn-bloom" aria-hidden="true"></span>
+              <svg
+                class="ready-btn-shape"
+                viewBox="0 0 1389.52 341.885"
+                width="1390"
+                height="342"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M8.77999 180.199L82.28 8.19895L698.28 30.699L1309.28 8.19895L1380.78 180.199L1309.28 333.699L698.28 311.699L82.28 333.699L8.77999 180.199Z"
+                  fill="#15253F"
+                  stroke="currentColor"
+                  stroke-width="16"
+                />
+              </svg>
+              <span class="ready-btn-label">
+                <svg
+                  class="ready-btn-check"
+                  viewBox="0 0 95.7983 65.3948"
+                  width="96"
+                  height="65"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M88.2982 7.50006L32.7495 57.8948L7.50006 34.9881"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="15"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>Ready</span>
+              </span>
+              <span class="ready-btn-scan" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".lang-btn").forEach((b) => {
+            b.classList.toggle("is-active", b === btn);
+            b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

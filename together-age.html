@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Macroverse — Together · Age</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="onboarding.css" />
+  </head>
+  <body>
+    <main class="viewport">
+      <div
+        class="stage age"
+        id="stage"
+        data-screen="age"
+        data-mode="together"
+        data-node-id="2078:3615"
+      >
+        <img
+          class="bg bg-age"
+          src="assets/bg-age.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <header class="top-nav top-nav-split">
+          <a class="back-btn" href="together.html">
+            <img
+              class="back-arrow"
+              src="assets/icon-back-h.svg"
+              alt=""
+              width="26"
+              height="14"
+              aria-hidden="true"
+            />
+            Back
+          </a>
+          <div
+            class="lang-toggle"
+            role="group"
+            aria-label="Language"
+            data-lang="en"
+          >
+            <button
+              type="button"
+              class="lang-btn is-active"
+              data-lang-option="en"
+              aria-pressed="true"
+            >
+              ENG
+            </button>
+            <button
+              type="button"
+              class="lang-btn"
+              data-lang-option="es"
+              aria-pressed="false"
+            >
+              ESP
+            </button>
+          </div>
+        </header>
+
+        <section class="age-body">
+          <h1 class="age-question">How old are you?</h1>
+
+          <div class="age-picker" aria-label="Age selector">
+            <div class="age-fade age-fade-left" aria-hidden="true"></div>
+            <div class="age-fade age-fade-right" aria-hidden="true"></div>
+            <div class="age-highlight" aria-hidden="true"></div>
+
+            <div
+              class="age-wheel"
+              id="age-wheel"
+              tabindex="0"
+              role="listbox"
+              aria-label="Age"
+            ></div>
+          </div>
+        </section>
+
+        <footer class="age-footer">
+          <button type="button" class="age-ready" id="age-continue">
+            <img
+              class="age-ready-shape"
+              src="assets/btn-ready-frame.svg"
+              alt=""
+              draggable="false"
+            />
+            <span class="age-ready-label">
+              <img
+                class="age-ready-icon"
+                src="assets/icon-ready-check.svg"
+                alt=""
+                width="96"
+                height="65"
+                draggable="false"
+              />
+              <span>Ready</span>
+            </span>
+          </button>
+        </footer>
+      </div>
+    </main>
+
+    <script src="onboarding.js"></script>
+  </body>
+</html>
