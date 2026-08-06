@@ -475,6 +475,7 @@
       soloImg.alt = String(player.name || "").replace(/!$/, "");
     }
 
+    // Ready → clear session → home
     document.getElementById("summary-continue")?.addEventListener("click", () => {
       clearPartyData();
       window.location.href = "index.html";

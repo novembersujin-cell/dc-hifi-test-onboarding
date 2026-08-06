@@ -1443,11 +1443,16 @@ body {
   }
 }
 
-/* Summary (solo check-in) */
+/* Summary (solo / together check-in) ? Figma 2101:4792 */
 .summary {
   display: flex;
   flex-direction: column;
-  background: #d5dcec;
+  background: #ece3fb;
+}
+
+.bg-summary {
+  object-fit: cover;
+  object-position: center center;
 }
 
 .summary-header {
@@ -1457,22 +1462,42 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: clamp(0.75rem, 1.8cqi, 1.4rem) clamp(1rem, 2.4cqi, 2rem);
+  padding: clamp(1rem, 2.2cqi, 2.5rem) clamp(1.25rem, 2.7cqi, 4rem);
+  background:
+    radial-gradient(
+      ellipse 80% 140% at 20% 50%,
+      rgba(91, 54, 140, 0.55) 0%,
+      transparent 70%
+    ),
+    #5f4686;
+}
+
+.summary .lang-toggle {
+  background: var(--white);
+  flex-shrink: 0;
+}
+
+.summary .lang-btn {
+  color: var(--purple);
+}
+
+.summary .lang-btn.is-active {
   background: var(--purple);
+  color: var(--white);
 }
 
 .summary-players {
   display: flex;
   align-items: center;
-  gap: clamp(0.45rem, 1.1cqi, 0.85rem);
+  gap: clamp(0.55rem, 1.4cqi, 1.25rem);
   min-width: 0;
   overflow-x: auto;
-  max-width: min(70%, 36rem);
+  max-width: min(72%, 48rem);
   padding-bottom: 0.15rem;
 }
 
 .summary-users-badge {
-  width: clamp(2.6rem, 5.8cqi, 4.2rem);
+  width: clamp(2.8rem, 6.2cqi, 5.5rem);
   aspect-ratio: 1;
   border-radius: 50%;
   background: #fff074;
@@ -1482,7 +1507,7 @@ body {
 }
 
 .summary-users-badge img {
-  width: 72%;
+  width: 62%;
   height: auto;
   display: block;
 }
@@ -1490,12 +1515,12 @@ body {
 .summary-avatar-list {
   display: flex;
   align-items: center;
-  gap: clamp(0.35rem, 0.9cqi, 0.65rem);
+  gap: clamp(0.4rem, 1cqi, 0.85rem);
 }
 
 .summary-avatar {
   position: relative;
-  width: clamp(2.6rem, 5.8cqi, 4.2rem);
+  width: clamp(2.6rem, 5.5cqi, 4.2rem);
   aspect-ratio: 1;
   border-radius: 50%;
   border: clamp(0.18rem, 0.4cqi, 0.28rem) solid var(--teal);
@@ -1543,13 +1568,16 @@ body {
   object-fit: fill;
 }
 
-.summary-avatar[data-box="4"] {
-  background: #82c24a;
+.summary-avatar[data-box="4"],
+.summary-avatar.is-tiger {
+  background: #54a40f;
   display: grid;
   place-items: center;
+  padding-top: 8%;
 }
 
-.summary-avatar[data-box="4"] .summary-avatar-img {
+.summary-avatar[data-box="4"] .summary-avatar-img,
+.summary-avatar.is-tiger .summary-avatar-img {
   width: 76%;
   height: auto;
   max-height: 110%;
@@ -1564,26 +1592,32 @@ body {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2.8cqi, 2.2rem);
-  padding: clamp(1rem, 2.6cqi, 2rem) clamp(1.2rem, 3.2cqi, 2.8rem) 0;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.25rem, 3.2cqi, 3.5rem);
+  padding: clamp(1rem, 2.6cqi, 2.5rem) clamp(1.5rem, 2.7cqi, 4rem) 0;
 }
 
 .summary-title {
   margin: 0;
+  width: 100%;
   color: var(--purple);
-  font-size: clamp(1.5rem, 4cqi, 3rem);
+  font-size: clamp(1.5rem, 4.2cqi, 6rem);
   font-weight: 700;
   line-height: 1.2;
+  text-align: center;
 }
 
 .summary-traits {
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: clamp(0.7rem, 2cqi, 1.6rem) clamp(0.8rem, 2.4cqi, 2rem);
+  grid-template-rows: auto auto;
+  gap: clamp(0.85rem, 2.4cqi, 2.8rem) clamp(1rem, 3cqi, 3.5rem);
   align-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .trait-card {
@@ -1591,6 +1625,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 0;
+  width: 100%;
 }
 
 .trait-card-bg {
@@ -1600,23 +1635,54 @@ body {
   pointer-events: none;
 }
 
+/* Faces are skewed parallelograms ? center on the purple face, not the SVG box. */
 .trait-card-content {
   position: absolute;
-  inset: 12% 8% 18% 6%;
+  left: 48.5%;
+  top: 46%;
+  width: 78%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.35rem, 1cqi, 0.75rem);
+  gap: clamp(0.35rem, 0.95cqi, 0.9rem);
   color: var(--white);
-  font-size: clamp(1rem, 3.2cqi, 2.4rem);
+  font-size: clamp(1.05rem, 3.6cqi, 4.5rem);
   font-weight: 700;
   line-height: 1.1;
   text-align: center;
   pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.trait-card-content span {
+  display: block;
+  text-align: center;
+}
+
+.trait-dynamic .trait-card-content {
+  left: 48.2%;
+  top: 44.5%;
+}
+
+.trait-curious .trait-card-content {
+  left: 50.5%;
+  top: 49%;
+}
+
+.trait-collab .trait-card-content {
+  left: 48.6%;
+  top: 48%;
+  width: 82%;
+  gap: clamp(0.25rem, 0.7cqi, 0.65rem);
+}
+
+.trait-tenacious .trait-card-content {
+  left: 49%;
+  top: 47.5%;
 }
 
 .trait-card-icon {
-  width: clamp(1.6rem, 4.2cqi, 3.2rem);
+  width: clamp(1.8rem, 5cqi, 5.5rem);
   height: auto;
   flex-shrink: 0;
   display: block;
@@ -1627,8 +1693,12 @@ body {
   z-index: 2;
   display: grid;
   place-items: center;
-  padding: clamp(0.8rem, 1.8cqi, 1.4rem) clamp(1.5rem, 2.6cqi, 2.5rem)
-    clamp(1rem, 2.2cqi, 1.8rem);
+  padding: clamp(0.8rem, 2cqi, 1.8rem) clamp(1.5rem, 2.7cqi, 4rem)
+    clamp(1.2rem, 2.7cqi, 4rem);
+}
+
+.summary-footer .age-ready {
+  width: min(48%, 36rem);
 }
 
 @media (max-width: 700px) {
@@ -1689,5 +1759,9 @@ body {
 
   .trait-card-content {
     font-size: clamp(0.85rem, 3.6cqi, 1.2rem);
+  }
+
+  .summary-footer .age-ready {
+    width: min(72%, 22rem);
   }
 }

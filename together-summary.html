@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="onboarding.css" />
@@ -22,17 +22,29 @@
         id="stage"
         data-screen="summary"
         data-mode="together"
+        data-node-id="2101:4792"
       >
+        <img
+          class="bg bg-summary"
+          src="assets/bg-summary.png"
+          alt=""
+          aria-hidden="true"
+        />
+
         <header class="summary-header">
           <div class="summary-players" aria-label="Checked-in players">
             <div class="summary-users-badge" aria-hidden="true">
-              <img src="assets/summary/icon-users.svg" alt="" draggable="false" />
+              <img
+                src="assets/summary/icon-users.svg"
+                alt=""
+                draggable="false"
+              />
             </div>
             <div class="summary-avatar-list" id="summary-avatar-list"></div>
           </div>
 
           <div
-            class="lang-toggle lang-on-dark"
+            class="lang-toggle"
             role="group"
             aria-label="Language"
             data-lang="en"
@@ -143,8 +155,24 @@
         </section>
 
         <footer class="summary-footer">
-          <button type="button" class="age-continue" id="summary-continue">
-            Label
+          <button type="button" class="age-ready" id="summary-continue">
+            <img
+              class="age-ready-shape"
+              src="assets/btn-group-cta.svg"
+              alt=""
+              draggable="false"
+            />
+            <span class="age-ready-label">
+              <img
+                class="age-ready-icon"
+                src="assets/icon-ready-check.svg"
+                alt=""
+                width="96"
+                height="65"
+                draggable="false"
+              />
+              Ready
+            </span>
           </button>
         </footer>
       </div>
